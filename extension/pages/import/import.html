@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="header flex justify-between items-center px-2 bg-gray-800 text-white py-2 mb-5">
+    <img src="../../assets/logo.png" class="w-20 ml-5" alt="Logo" />
+
+    <div class="flex items-center relative mr-5">
+      <p class="username mr-4">skrskr707</p>
+      <div class="dropdown">
+        <button id="dropdownButton" class="dropdown-button relative flex items-center">
+          <i class="fas fa-ellipsis-v mr-2"></i> <!-- Font Awesome icon with 3 bullets vertically -->
+        </button>
+        <div id="dropdownMenu" class="dropdown-menu absolute hidden right-0 mt-2 w-40 bg-white rounded shadow-lg">
+          <div class="dropdown-content py-1">
+            <a href="#" class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200">Help Center</a>
+            <a href="#" class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200" id="logout">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="wrapper">
+    <div class="mb-3">
+      <p class="text-md font-bold">Select a exchange to collect data from:</p>
+    </div>
+
+    <div id="navigation" class="flex justify-center mb-4">
+      <button id="kucoinBTN" class="flex mx-2 tab-btn p-2 items-center text-white text-lg not-selected-button" data-target="kucoin">
+        <img src="../../assets/kucoin.png" class="w-5 h-5" />
+        <span>Kucoin</span>
+      </button>
+      <button id="binanceBTN" class="flex mx-2 tab-btn p-2 items-center text-white text-lg not-selected-button" data-target="binance">
+        <img src="../../assets/binance.png" class="h-5" />
+      </button>
+      <button id="bybitBTN" class="flex mx-2 tab-btn p-2 items-center text-white text-lg not-selected-button" data-target="bybit">
+        <img src="../../assets/bybit.png" class="h-5" />
+      </button>
+    </div>
+
+    <div id="directionText" class="cursor-pointer underline text-center mb-3"></div>
+
+  </div>
+
+  <!-- FETCH DATA-->
+  <div class="flex items-center justify-between px-5 hidden" id="optionsContainer">
+    <div class="flex flex-col items-center">
+
+      <div>
+        <div id="fetchDataFile" class="mb-4">
+          <label for="fileInput"
+            class="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded inline-block">
+            Choose File
+            <i class="fas fa-upload ml-2"></i>
+          </label>
+          <input type="file" id="fileInput" accept=".csv" class="hidden">
+        </div>
+
+        <button id="fetchDataBtn" class="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer text-center">Fetch
+          Data
+        </button>
+      </div>
+    </div>
+
+    <div class=" border border-gray-200 p-2">
+      <p class="text-md font-bold text-center">Settings:</p>
+      <label for="hide" class="flex items-center cursor-pointer">
+        <input type="checkbox" id="hide" name="hide" class="mr-2" checked>
+        <span class="text-gray-700 font-medium">Hide small values</span>
+      </label>
+    </div>
+  </div>
+  <script src="./import.js" type="module" defer></script>
+</body>
+
+</html>

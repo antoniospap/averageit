@@ -1,0 +1,64 @@
+body {
+    min-width: 360px;
+    min-height: 500px;
+    overflow: hidden !important;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding: 15px 0px;
+}
+
+.wrapper {
+    padding: 15px 30px;
+}
+
+
+
+#kucoinBTN {
+    background-color: #2dbd96;
+}
+
+#bybitBTN {
+    background-color: #131d38;
+}
+
+#binanceBTN {
+    background-color: black;
+}
+
+/*
+    Selected TabMenu Dashboard
+*/
+.selected-tab {
+    background-color: #6b7280; /* Replace with your desired background color */
+    color: #ffffff; /* Replace with your desired text color */
+    font-size: 20px;
+    font-weight: 500;
+}
+.selected-tab:hover {
+    background-color:  #6b7280;
+}
+
+.selected-button {
+    opacity: 1; /* Full opacity for selected button */
+    background-color: #4a90e2; /* Change background color for selected button */
+    color: white; /* Change text color for selected button */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for selected button */
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+
+.not-selected-button {
+    opacity: 0.5; /* Reduced opacity for unselected button */
+    filter: brightness(50%); /* Add black filter to unselected button */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Add transition for smooth effect */
+}
+
+.navigation button:hover:not(.selected-button) {
+    opacity: 0.7; /* Reduce opacity of unselected button on hover */
+    filter: brightness(70%); /* Lighten the black filter on hover */
+}

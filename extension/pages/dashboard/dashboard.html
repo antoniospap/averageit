@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="header flex justify-between items-center px-2 bg-gray-800 text-white py-2 mb-5">
+    <img src="../../assets/logo.png" class="w-20 ml-5" alt="Logo" />
+
+    <div class="flex items-center relative mr-5">
+      <p class="username mr-4">skrskr707</p>
+      <div class="dropdown">
+        <button id="dropdownButton" class="dropdown-button relative flex items-center">
+          <i class="fas fa-ellipsis-v mr-2"></i> <!-- Font Awesome icon with 3 bullets vertically -->
+        </button>
+        <div id="dropdownMenu" class="dropdown-menu absolute hidden right-0 mt-2 w-40 bg-white rounded shadow-lg">
+          <div class="dropdown-content py-1">
+            <a href="#" class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200">Help Center</a>
+            <a href="#" class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200" id="logout">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISPLAY DATA -->
+
+  <div>
+    <div class="flex w-full tabMenu">
+      <button id="btnAll"
+        class="flex-grow bg-gray-200 text-gray-700 px-4 py-2 rounded-l-md hover:bg-gray-300">All</button>
+      <button id="btnKucoin"
+        class="flex-grow bg-gray-200 text-gray-700 px-4 py-2 selected-tab hover:bg-gray-300">Kucoin</button>
+      <button id="btnBybit"
+        class="flex-grow bg-gray-200 text-gray-700 px-4 py-2 rounded-r-md hover:bg-gray-300">Bybit</button>
+    </div>
+    <div id="import" class="px-5 text-lg">Import</div>
+
+    <div id="result" class="px-5"></div>
+  </div>
+
+
+  <script src="./dashboard.js" type="module" defer></script>
+
+</body>
+
+</html>
